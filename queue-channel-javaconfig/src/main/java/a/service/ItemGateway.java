@@ -5,10 +5,10 @@ import org.springframework.integration.annotation.MessagingGateway;
 
 import a.domain.Item;
 
-@MessagingGateway(name = "itemGateway", defaultRequestChannel = "itemChannel")
+@MessagingGateway(name = "itemGateway")
 public interface ItemGateway {
 
-	@Gateway(requestChannel = "itemChannel", replyChannel="processedItemChannel")
+	@Gateway(requestChannel = "itemChannel")
 	public void placeItem(Item item);
 
 }
