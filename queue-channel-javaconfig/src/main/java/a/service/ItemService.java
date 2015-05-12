@@ -13,8 +13,8 @@ public class ItemService {
 			.getLogger(ItemService.class);
 
 	@ServiceActivator(inputChannel = "itemChannel", outputChannel = "processedItemChannel")
-	public Item processDefect(Item item) {
-		logger.info("processing defect...");
+	public Item processItem(Item item) {
+		logger.info("processing item...");
 
 		logger.info("before - item id {}", item.getId());
 		logger.info("before - item link {}", item.getLink());

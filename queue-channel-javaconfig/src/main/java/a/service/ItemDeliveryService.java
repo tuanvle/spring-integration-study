@@ -13,7 +13,7 @@ public class ItemDeliveryService {
 			.getLogger(ItemDeliveryService.class);
 
 	@ServiceActivator(inputChannel="processedItemChannel")
-	public void deliverDefect(Item item) {
+	public void deliverItem(Item item) {
 
 		logger.info("after - item id {}", item.getId());
 		logger.info("after - item link {}", item.getLink());
