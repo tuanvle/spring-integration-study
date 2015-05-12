@@ -12,7 +12,7 @@ public class ItemDeliveryService {
 	private static final Logger logger = LoggerFactory
 			.getLogger(ItemDeliveryService.class);
 
-	@ServiceActivator(inputChannel="processedItemChannel")
+	@ServiceActivator
 	public void deliverItem(Item item) {
 
 		logger.info("after - item id {}", item.getId());

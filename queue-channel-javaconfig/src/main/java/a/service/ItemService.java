@@ -12,7 +12,7 @@ public class ItemService {
 	private static final Logger logger = LoggerFactory
 			.getLogger(ItemService.class);
 
-	@ServiceActivator(inputChannel = "itemChannel", outputChannel = "processedItemChannel")
+	@ServiceActivator
 	public Item processItem(Item item) {
 		logger.info("processing item...");
 
@@ -23,5 +23,4 @@ public class ItemService {
 
 		return item;
 	}
-
 }

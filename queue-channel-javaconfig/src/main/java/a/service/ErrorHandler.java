@@ -11,7 +11,7 @@ public class ErrorHandler {
 			.getLogger(ErrorHandler.class);
 
 	@ServiceActivator(inputChannel = "errorChannel")
-	public void handlerException(Exception e) {
+	public void handleException(Exception e) {
 		logger.error("Error", e);
 
 	}
